@@ -7,7 +7,6 @@
  *
  * Copyright IBM Corporation 2016, 2018
  */
-
 package com.zowe.jzos.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
