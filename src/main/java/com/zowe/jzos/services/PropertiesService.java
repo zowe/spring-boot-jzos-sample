@@ -38,7 +38,6 @@ public class PropertiesService {
 		} catch (Exception e) {
 			String error = String.format("Attempt to read environment list failed: %s", e.getMessage());
 			log.warn(error);
-//			throw new JzosExceptionHandler(error);
 		}
 		return pairs;
 	}
