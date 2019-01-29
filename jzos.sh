@@ -18,3 +18,13 @@ java -cp .:$JAVA_HOME/lib/ext/ibmjzos.jar \
 	-Dserver.port=2956 -Dserver.ssl.enabled=true -Dserver.scheme=https \
 	-Dserver.serviceId=jzos -Dserver.serviceTitle="z/OS System Information" -Dserver.serviceDescription="Collecting z/OS System Information based on JZOS" \
 	-jar jzos.jar com.zowe.jzos.JzosApplication
+
+	java -cp .:$JAVA_HOME/lib/ext/ibmjzos.jar -Xms16m -Xmx512m \
+    -Dserver.port={nnnn} \
+    -Dserver.sslEnabled=true -Dserver.scheme=https \
+    -Dserver.ssl.keyAlias=localhost \
+    -Dserver.ssl.keyStore={your root}}/zowe/1.0.0/api-mediation/keystore/localhost/localhost.keystore.p12 \
+    -Dserver.ssl.keyStorePassword=password \
+    -Dserver.ssl.keyStoreType=PKCS12 \
+	-Dserver.serviceId=jzos -Dserver.serviceTitle="z/OS Java Information" -Dserver.serviceDescription="API's for collecting z/OS System Information" \
+    -jar jzos-0.0.1-SNAPSHOT.jar com.zowe.jzos.JzosApplication
