@@ -10,14 +10,6 @@ fi
 echo JAVA_HOME=$JAVA_HOME
 
 DIR=`dirname $0`
-	
-java -cp .:$JAVA_HOME/lib/ext/ibmjzos.jar \
-	-Dserver.ssl.key-password=zoe_password \
- 	-Dserver.ssl.key-store=$DIR/../../0.9.3/api-mediation/keystore/api_gateway.ks \
-	-Dserver.ssl.key-store-type=JKS -Dserver.ssl.key-store.password=zoe_password \
-	-Dserver.port=2956 -Dserver.ssl.enabled=true -Dserver.scheme=https \
-	-Dserver.serviceId=jzos -Dserver.serviceTitle="z/OS System Information" -Dserver.serviceDescription="Collecting z/OS System Information based on JZOS" \
-	-jar jzos.jar com.zowe.jzos.JzosApplication
 
 	java -cp .:$JAVA_HOME/lib/ext/ibmjzos.jar -Xms16m -Xmx512m \
     -Dserver.port={nnnn} \
