@@ -7,9 +7,9 @@ It is also a good sample for anyone wishing to create a Rest API Spring Boot app
 This sample uses JZOS to provision a Rest API for accessing Java environmental variables. 
 ![Image of swagger generated via Spring Boot](./images/Screenshot.png) 
 
-:::warning
-It should be noted that the executable code in this example runs under the user id of whoever started the process and not that of the user accessing the RestAPI. Since the sample demonstrates the full range of REST functions: GET, PUT, POST and DELETE anyone logging in is potentially able to change environmental variables of the originating user. For that reason this sample should only be used in development scenarios.
-:::
+
+## When using this sample
+> It should be noted that the executable code in this example runs under the user id of whoever started the process and not that of the user accessing the RestAPI. Since the sample demonstrates the full range of REST functions: GET, PUT, POST and DELETE anyone logging in is potentially able to change environmental variables of the originating user. For that reason this sample should only be used in development scenarios.
 
 ## Prerequisites 
 
