@@ -7,6 +7,10 @@ It is also a good sample for anyone wishing to create a Rest API Spring Boot app
 This sample uses JZOS to provision a Rest API for accessing Java environmental variables. 
 ![Image of swagger generated via Spring Boot](./images/Screenshot.png) 
 
+:::warning
+It should be noted that the executable code in this example runs under the user id of whoever started the process and not that of the user accessing the RestAPI. Since the sample demonstrates the full range of REST functions: GET, PUT, POST and DELETE anyone logging in is potentially able to change environmental variables of the originating user. For that reason this sample should only be used in development scenarios.
+:::
+
 ## Prerequisites 
 
 * Build requires Maven installed on local machine
@@ -21,7 +25,7 @@ The app has a dependency on IBMJZOS so for compiling you need to download from y
 ## Procedure
 
 * Download this sample to your local machine. 
-* Download IBMJZOS from the host machine running Zowe. Create a lib folder off the project root and create the ibmjzos-1.0.jar file for compilation purposes
+* Download IBMJZOS from the host machine running Zowe as described above creating the libs folder in your project and adding the ibmjzos-1.0.jar file. This file is referenced when compiling only.
 * Build the sample and transfer the file /jzos/target/jzos-0.0.1-SNAPSHOT.jar to a USS folder on the Zowe server. (mvn clean verify)
 * Transfer the jzos.sh file from the project root folder to the same USS folder on the Zowe server.
 * Modify the shell script as necessary for the environment
