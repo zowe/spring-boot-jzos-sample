@@ -41,7 +41,7 @@ It is envisaged that you will eventually set this to run as a service but will s
  
 ### Access swagger
 
-Use the address https://{zowe installation host}:{your defined port}/api/v1/swagger-ui.html to access the swagger page. Scroll down to click on JzOS Variables controller then choose "Try it out" and then "Execute" to make sure the API works.
+Use the address https://{zowe installation host}:{your defined port}/swagger-ui.html to access the swagger page. Scroll down to click on JzOS Variables controller then choose "Try it out" and then "Execute" to make sure the API works. You can copy and paste the urls into your browser
 
 ### Introduce your application to the Gateway. 
 
@@ -51,7 +51,7 @@ To allow your application to be accessible through the API Gateway you need to a
 # Fill in the following variables
 ZOWE_ROOT_DIR=    # The root directory of the Zowe installation
 ZOWE_EXPLORER_HOST=   # Host name of the Zowe installation
-JZOS_PORT=57949       # The address where your application is running 
+JZOS_PORT=       # The address where your application is running 
 ```
 
 Run this script and the yaml file will be created with the appropriate configuration. Restart Zowe to pick up the definition 
@@ -59,3 +59,10 @@ Run this script and the yaml file will be created with the appropriate configura
 ### Access through the Gateway
 
 ![Image of JzOS in gateway](./images/gateway.png) 
+
+You will also be able to access your endpoints directly through the gateway. So for example:
+
+https://{zowe installation host}:{your gateway port}/api/v1/jzos/environmentVariables
+will redirect to:
+https://{zowe installation host}:{your defined port}/jzos/environmentVariables
+

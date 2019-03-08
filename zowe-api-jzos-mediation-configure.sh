@@ -28,20 +28,20 @@ services:
   - serviceId: jzos
     title: IBM z/OS JzOS
     description: IBM z/OS JzOS REST API service
-    catalogUiTileId: jzos
+    catalogUiTileId: jzosSampler
     instanceBaseUrls:
       - https://$ZOWE_EXPLORER_HOST:$JZOS_PORT/
     homePageRelativeUrl:
     routedServices:
       - gatewayUrl: api/v1
-        serviceRelativeUrl: api/v1/jzos
+        serviceRelativeUrl: jzos
     apiInfo:
       - apiId: com.zowe.jzos
         gatewayUrl: api/v1
         version: 1.0.0
-        documentationUrl: https://$ZOWE_EXPLORER_HOST:$JZOS_PORT/api/v1/swagger-ui.html
+        documentationUrl: https://$ZOWE_EXPLORER_HOST:$JZOS_PORT/swagger-ui.html
 catalogUiTiles:
-  jzos:
+  jzosSampler:
     title: z/OS JzOS services
     description: IBM z/OS JzOS REST services
 EOF
